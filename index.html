@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>彭奕卓｜个人主页</title>
+  <meta name="description" content="彭奕卓的个人主页。复旦大学国际事务硕士研究生，关注AI方向运营、战略运营与数字化项目支持实习机会。" />
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --cream: #f7f2e8;
+      --paper: #fbf7ef;
+      --muted: #666666;
+      --yellow: #ffd166;
+      --pink: #ff6b7a;
+      --blue: #2f81f7;
+      --green: #39745f;
+      --purple: #6366f1;
+      --orange: #ff9f1c;
+      --radius-lg: 30px;
+      --radius-md: 20px;
+      --shadow: 8px 8px 0 rgba(0,0,0,1);
+      --shadow-small: 5px 5px 0 rgba(0,0,0,1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--black);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(255, 209, 102, 0.28), transparent 24%),
+        radial-gradient(circle at 88% 12%, rgba(47, 129, 247, 0.14), transparent 26%),
+        radial-gradient(circle at 80% 80%, rgba(255, 107, 122, 0.12), transparent 24%),
+        linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 24px 0 14px;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      background: rgba(255,255,255,0.92);
+      border: 4px solid var(--black);
+      border-radius: 20px;
+      box-shadow: 6px 6px 0 var(--black);
+      padding: 14px 20px;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 950;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.62;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--black);
+      border-radius: 15px;
+      background: var(--black);
+      color: var(--white);
+      box-shadow: var(--shadow-small);
+      padding: 14px 20px;
+      font-weight: 900;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 3px 3px 0 var(--black);
+    }
+
+    .btn.secondary {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .hero {
+      padding: 70px 0 76px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      background: var(--yellow);
+      border: 3px solid var(--black);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 84px);
+      line-height: 1.12;
+      letter-spacing: -0.06em;
+      font-weight: 950;
+    }
+
+    .highlight {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--white);
+      border: 3px solid var(--black);
+      border-radius: 12px;
+      padding: 0 12px 5px;
+      box-shadow: var(--shadow-small);
+      transform: rotate(-1deg);
+    }
+
+    .hero-text {
+      margin: 28px 0 0;
+      color: var(--muted);
+      max-width: 680px;
+      font-size: 20px;
+      line-height: 1.9;
+      font-weight: 520;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .quick-item {
+      background: var(--white);
+      border: 3px solid var(--black);
+      border-radius: 18px;
+      padding: 15px;
+      font-weight: 900;
+    }
+
+    .quick-item span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .avatar-card {
+      position: relative;
+      background: var(--yellow);
+      border: 4px solid var(--black);
+      border-radius: 38px;
+      box-shadow: -10px 10px 0 var(--black);
+      overflow: hidden;
+      min-height: 560px;
+    }
+
+    .avatar-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+      object-position: center top;
+      transform: scale(1.04);
+    }
+
+    .floating-note {
+      position: absolute;
+      left: 22px;
+      bottom: 24px;
+      background: var(--white);
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      padding: 12px 15px;
+      font-weight: 950;
+      box-shadow: var(--shadow-small);
+      transform: rotate(2deg);
+    }
+
+    .marquee-section {
+      overflow: hidden;
+      padding: 24px 0 40px;
+    }
+
+    .marquee {
+      background: var(--blue);
+      border-top: 4px solid var(--black);
+      border-bottom: 4px solid var(--black);
+      transform: rotate(-2deg) scale(1.04);
+      padding: 22px 0;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      animation: scroll 20s linear infinite;
+    }
+
+    .marquee span {
+      color: var(--white);
+      margin: 0 34px;
+      font-size: clamp(26px, 4vw, 46px);
+      font-weight: 950;
+      letter-spacing: -0.03em;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-head .label {
+      display: inline-flex;
+      margin-bottom: 14px;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.14;
+      letter-spacing: -0.05em;
+      font-weight: 950;
+    }
+
+    .section-head p {
+      margin: 0 auto;
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.85;
+      font-weight: 520;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 28px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 4px solid var(--black);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .card:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: var(--shadow);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .profile-panel {
+      background: var(--black);
+      color: var(--white);
+      border: 4px solid var(--black);
+      border-radius: 34px;
+      box-shadow: -10px 10px 0 var(--yellow);
+      padding: 34px;
+    }
+
+    .profile-panel h3 {
+      margin: 0 0 18px;
+      font-size: 38px;
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+    }
+
+    .profile-panel p {
+      color: rgba(255,255,255,.82);
+      line-height: 1.9;
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .about h2 {
+      margin: 0 0 20px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.16;
+      letter-spacing: -0.05em;
+    }
+
+    .about-intro {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.9;
+      margin: 0 0 26px;
+    }
+
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+    }
+
+    .quality {
+      background: var(--white);
+      border: 3px solid var(--black);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .quality h4 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .quality p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .experience-card {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 28px;
+      background: var(--white);
+      border: 4px solid var(--black);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      margin-bottom: 24px;
+    }
+
+    .date-pill {
+      align-self: start;
+      background: var(--yellow);
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      padding: 13px 14px;
+      font-weight: 950;
+      text-align: center;
+      box-shadow: var(--shadow-small);
+    }
+
+    .experience-card h3 {
+      margin: 0 0 14px;
+      font-size: 26px;
+      line-height: 1.38;
+    }
+
+    .experience-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-weight: 520;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .metric {
+      background: var(--cream);
+      border: 3px solid var(--black);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 14px;
+    }
+
+    .project-cover {
+      min-height: 250px;
+      border: 4px solid var(--black);
+      border-radius: 24px;
+      margin-bottom: 24px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-cover.yellow {
+      background: linear-gradient(135deg, #ffd166, #ffe7a3);
+    }
+
+    .project-cover.blue {
+      background: linear-gradient(135deg, #2f81f7, #77b2ff);
+      color: var(--white);
+    }
+
+    .project-index {
+      width: fit-content;
+      background: var(--white);
+      color: var(--black);
+      border: 3px solid var(--black);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-weight: 950;
+      font-size: 14px;
+    }
+
+    .project-title-en {
+      font-size: clamp(40px, 6vw, 62px);
+      line-height: .95;
+      letter-spacing: -0.06em;
+      font-weight: 950;
+    }
+
+    .card h3 {
+      margin: 0 0 14px;
+      font-size: 25px;
+      line-height: 1.35;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 16px;
+    }
+
+    .work-list {
+      margin: 18px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      display: inline-flex;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 7px 10px;
+      font-size: 13px;
+      font-weight: 850;
+    }
+
+    .skill-card h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
+
+    .skill-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .portfolio-feature {
+      background: var(--white);
+      border: 4px solid var(--black);
+      border-radius: 34px;
+      padding: 32px;
+      margin-bottom: 28px;
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .portfolio-pdf {
+      min-height: 420px;
+      border: 4px solid var(--black);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 80% 18%, rgba(255,255,255,.8), transparent 16%),
+        linear-gradient(135deg, var(--green), #d6c1a1);
+      color: var(--white);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .portfolio-pdf .small {
+      width: fit-content;
+      background: var(--white);
+      color: var(--black);
+      border: 3px solid var(--black);
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-weight: 950;
+    }
+
+    .portfolio-pdf .big {
+      font-size: clamp(48px, 7vw, 78px);
+      line-height: .95;
+      letter-spacing: -0.07em;
+      font-weight: 950;
+    }
+
+    .portfolio-text h3 {
+      margin: 0 0 18px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.14;
+      letter-spacing: -0.05em;
+    }
+
+    .portfolio-text p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .portfolio-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .work-card {
+      background: var(--white);
+      border: 4px solid var(--black);
+      border-radius: 24px;
+      padding: 14px;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .work-card:hover {
+      transform: translate(-3px,-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .work-img {
+      aspect-ratio: 3 / 4;
+      border: 3px solid var(--black);
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--cream);
+      margin-bottom: 14px;
+    }
+
+    .work-img.wide {
+      aspect-ratio: 4 / 5;
+    }
+
+    .work-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .work-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .work-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .contact {
+      background: var(--black);
+      color: var(--white);
+      padding: 76px 0 36px;
+      margin-top: 40px;
+    }
+
+    .contact-box {
+      background: var(--white);
+      color: var(--black);
+      border: 4px solid var(--black);
+      border-radius: var(--radius-lg);
+      box-shadow: 8px 8px 0 rgba(255,255,255,.25);
+      padding: 36px;
+      margin-bottom: 34px;
+    }
+
+    .contact-box h2 {
+      margin: 0 0 16px;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.12;
+      letter-spacing: -0.05em;
+    }
+
+    .contact-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 22px;
+    }
+
+    .contact-card {
+      border: 3px solid var(--white);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .contact-card p {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 950;
+      word-break: break-all;
+    }
+
+    .copyright {
+      margin-top: 34px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.22);
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      color: rgba(255,255,255,.68);
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .grid-2,
+      .grid-3,
+      .portfolio-feature,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-gallery {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .metric-grid,
+      .quick-info {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .avatar-card {
+        max-width: 540px;
+        margin: 0 auto;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+      }
+
+      .date-pill {
+        width: fit-content;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        line-height: 1.22;
+      }
+
+      .hero-text {
+        font-size: 17px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .quick-info,
+      .quality-grid,
+      .metric-grid,
+      .portfolio-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .avatar-card,
+      .avatar-card img {
+        min-height: 430px;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+
+      .contact-card p {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav-wrap">
+    <nav class="nav">
+      <a href="#" class="brand">彭奕卓</a>
+      <div class="nav-links">
+        <a href="#about">关于我</a>
+        <a href="#experience">实习经历</a>
+        <a href="#projects">项目经历</a>
+        <a href="#skills">技能工具</a>
+        <a href="#portfolio">作品集</a>
+      </div>
+      <a class="btn" href="mailto:pyz1789@outlook.com">联系我</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">2027届硕士研究生 · 一周内可到岗</div>
+          <h1>
+            我是
+            <span class="highlight">彭奕卓</span><br />
+            关注 AI 与运营的文科生
+          </h1>
+          <p class="hero-text">
+            复旦大学国际事务硕士研究生，正在寻找 AI 方向运营、战略运营与数字化项目支持相关实习机会。可连续实习 3–6 个月，关注 AI 工具落地、业务提效、项目推进与内容传播。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="mailto:pyz1789@outlook.com">发送邮件</a>
+            <a class="btn secondary" href="#portfolio">查看作品集</a>
+          </div>
+
+          <div class="quick-info">
+            <div class="quick-item">复旦大学<span>国际事务｜硕士</span></div>
+            <div class="quick-item">AI 项目支持<span>培训组织｜内容传播</span></div>
+            <div class="quick-item">3–6 个月<span>一周内可到岗</span></div>
+          </div>
+        </div>
+
+        <div class="avatar-card">
+          <img src="头像.png" alt="彭奕卓 AI 卡通头像" />
+          <div class="floating-note">Fudan · AI Operations</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-section" aria-label="关键词">
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>AI 方向运营</span>
+          <span>战略运营</span>
+          <span>数字化项目支持</span>
+          <span>内容传播</span>
+          <span>项目推进</span>
+          <span>AI 方向运营</span>
+          <span>战略运营</span>
+          <span>数字化项目支持</span>
+          <span>内容传播</span>
+          <span>项目推进</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div class="profile-panel">
+          <h3>About Me</h3>
+          <p>
+            我不是技术型候选人，但希望成为懂业务、能表达、能推进的 AI 与数字化项目支持者。相比单纯堆叠概念，我更关注工具如何真正进入业务流程、提升协作效率，并通过清楚的材料、内容和执行让项目向前推进。
+          </p>
+        </div>
+
+        <div>
+          <div class="eyebrow">关于我 · How I Work</div>
+          <h2>在研究、内容与执行之间，形成可靠的工作方式</h2>
+          <p class="about-intro">
+            我是复旦大学国际事务专业硕士研究生，本科毕业于华南理工大学行政管理专业。具备金融机构 AI 能力建设与数字化项目支持经验，熟悉项目材料整理、跨部门沟通协调、活动执行、内容传播与基础数据分析。
+          </p>
+
+          <div class="quality-grid">
+            <div class="quality">
+              <h4>项目推进</h4>
+              <p>重视任务边界、时间节点和交付物，习惯将复杂事务拆解为可执行步骤。</p>
+            </div>
+            <div class="quality">
+              <h4>内容表达</h4>
+              <p>具备较好的文字组织、材料撰写、推文编辑和信息转译能力。</p>
+            </div>
+            <div class="quality">
+              <h4>业务理解</h4>
+              <p>面对陌生议题时，先梳理背景、流程与利益关系，再形成判断。</p>
+            </div>
+            <div class="quality">
+              <h4>数据意识</h4>
+              <p>能使用 Excel、SPSS、Stata、SQL 和 Power BI 完成基础处理与可视化。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Internship</span>
+          <h2>实习经历</h2>
+          <p>
+            在金融机构战略及数字化部门，参与 AI 能力建设、培训组织、内容传播与项目材料撰写。
+          </p>
+        </div>
+
+        <article class="experience-card">
+          <div class="date-pill">2025.09<br />—<br />2025.11</div>
+          <div>
+            <h3>东亚银行（中国）有限公司｜战略及数字化办公室｜实习生</h3>
+            <ul>
+              <li>参与全行 AI 能力建设项目，协助面向 7 个业务条线及部分分行开展多场 AI 技能培训与创新比赛。</li>
+              <li>覆盖 179 名学员，对接 32 名参赛队长，参与培训组织、流程协调、答疑反馈与赛后总结。</li>
+              <li>参与内部 AI 平台功能学习、演示材料整理与培训支持，协助业务人员理解 AI 工具在办公提效、业务分析与流程优化中的应用场景。</li>
+              <li>独立完成 AI 创新比赛宣传视频脚本撰写、剪辑发布及多篇公众号推文，累计阅读量 4k+。</li>
+              <li>参与金融科技奖项申报材料初稿撰写，协助整理项目背景、技术路径、应用成效与案例亮点；相关项目获得金融科技发展奖三等奖，撰写案例入选股权追溯案例汇编示范文件。</li>
+            </ul>
+
+            <div class="metric-grid">
+              <div class="metric"><strong>7</strong><span>业务条线覆盖</span></div>
+              <div class="metric"><strong>179</strong><span>培训学员</span></div>
+              <div class="metric"><strong>32</strong><span>参赛队长对接</span></div>
+              <div class="metric"><strong>4k+</strong><span>内容阅读量</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Projects</span>
+          <h2>项目经历</h2>
+          <p>
+            以资料整合、文献梳理、问卷调研和政策分析为基础，沉淀研究分析、信息组织与问题拆解能力。
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="project-cover yellow">
+              <div class="project-index">Project 01</div>
+              <div class="project-title-en">5G<br />AI<br />Scheduling</div>
+            </div>
+            <h3>5G基站集群协同节能AI调度模型研究</h3>
+            <p>
+              围绕 5G 基站节能、AI 调度、通信基础设施和“双碳”相关议题，系统搜集行业报告、政策文件、新闻资料和学术文献。
+            </p>
+            <ul class="work-list">
+              <li>为项目背景研究提供资料支持，进行清洗、分类和主题归纳。</li>
+              <li>整理 5G 基站集群节能、智慧城市、工业互联网等重点应用场景。</li>
+              <li>参与项目背景和应用场景分析部分撰写，理解技术应用、政策环境和产业需求之间的关系。</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">AI 调度</span>
+              <span class="tag">行业研究</span>
+              <span class="tag">资料整理</span>
+              <span class="tag">技术治理</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="project-cover blue">
+              <div class="project-index">Project 02</div>
+              <div class="project-title-en">Digital<br />Government</div>
+            </div>
+            <h3>数字政府背景下移动政务平台公众采纳影响因素研究</h3>
+            <p>
+              围绕数字政府服务、用户使用意愿和平台信任机制开展文献梳理、问卷设计、访谈执行和结果分析。
+            </p>
+            <ul class="work-list">
+              <li>结合 UTAUT、D&M 模型及信任理论，梳理绩效期望、努力期望、社会影响、信息质量、系统质量与信任机制等影响因素。</li>
+              <li>赴越秀区 3 个街道开展问卷调查与访谈，回收 234 份问卷，获得 213 份有效样本。</li>
+              <li>参与样本整理、问题分析和政策建议撰写。</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">数字政府</span>
+              <span class="tag">问卷调研</span>
+              <span class="tag">公共服务</span>
+              <span class="tag">政策建议</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Skills</span>
+          <h2>技能工具</h2>
+          <p>
+            以办公协作、基础数据处理和中英文资料检索为核心，支持项目推进、材料撰写和内容表达。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card skill-card">
+            <h3>办公与项目支持</h3>
+            <p>
+              熟练使用 Word、PowerPoint、Excel 完成材料撰写、汇报制作、会议纪要、基础数据整理和项目进度跟进；掌握 VLOOKUP、基础函数、图表制作及数据透视表。
+            </p>
+          </article>
+
+          <article class="card skill-card">
+            <h3>数据与工具基础</h3>
+            <p>
+              可使用 SPSS、Stata 完成描述性统计、相关性分析、基础回归和常见显著性检验；掌握 SQL 基础查询；了解 Power BI 基础可视化流程。
+            </p>
+          </article>
+
+          <article class="card skill-card">
+            <h3>语言与资料检索</h3>
+            <p>
+              大学英语六级 597、四级 587，具备较好的英文资料阅读、信息检索和书面表达能力，能够支持中英文材料整理和研究辅助工作。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Portfolio</span>
+          <h2>作品集</h2>
+          <p>
+            以下作品主要展示内容审美、版式设计、活动传播和视觉表达能力。作品集放在网站后部，作为求职材料的补充展示。
+          </p>
+        </div>
+
+        <div class="portfolio-feature">
+          <div class="portfolio-pdf">
+            <div class="small">PDF Portfolio</div>
+            <div class="big">Campus<br />Content<br />Design</div>
+            <div>海报设计 · 活动推文 · 校园传播 · 视觉排版</div>
+          </div>
+
+          <div class="portfolio-text">
+            <h3>从活动信息到可传播内容</h3>
+            <p>
+              我在校园活动与社团传播中积累了海报设计、公众号内容组织、活动文案和视觉排版经验。相比单纯追求好看，我更关注信息层级是否清楚、阅读路径是否顺畅，以及视觉风格是否服务于具体场景。
+            </p>
+            <p>
+              后续可继续补充公众号截图、视频脚本、剪辑作品和数据图表，使该页面成为可直接附在简历中的在线作品集入口。
+            </p>
+            <a class="btn secondary" href="校史 雅集pdf.pdf" target="_blank">查看 PDF 作品</a>
+          </div>
+        </div>
+
+        <div class="portfolio-gallery">
+          <article class="work-card">
+            <div class="work-img">
+              <img src="海报1.png" alt="雪国主题海报设计" />
+            </div>
+            <h3>文学主题海报｜雪国</h3>
+            <p>以留白、冷色调和竖向文字组织营造文学感，突出主题氛围与阅读情绪。</p>
+          </article>
+
+          <article class="work-card">
+            <div class="work-img">
+              <img src="海报2.png" alt="雨主题海报设计" />
+            </div>
+            <h3>文学主题海报｜雨</h3>
+            <p>围绕《百年孤独》文本意象进行视觉转译，强化文字、图像与情绪的统一。</p>
+          </article>
+
+          <article class="work-card">
+            <div class="work-img">
+              <img src="招新2.png" alt="悦读协会招新海报" />
+            </div>
+            <h3>社团招新海报｜悦读协会</h3>
+            <p>面向招新场景进行信息排版，兼顾活动时间、地点、对象和报名入口展示。</p>
+          </article>
+
+          <article class="work-card">
+            <div class="work-img">
+              <img src="招新1.png" alt="文学社招新海报" />
+            </div>
+            <h3>社团招新海报｜文学社</h3>
+            <p>使用传统视觉元素和大标题排版，突出文学社招新主题与校园传播氛围。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>正在寻找实习机会，欢迎联系。</h2>
+        <p>
+          期待 AI 方向运营、战略运营、数字化项目支持、内容运营等相关实习机会。可一周内到岗，可连续实习 3–6 个月。
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>电话 / 微信</h3>
+          <p>18301731033</p>
+        </div>
+        <div class="contact-card">
+          <h3>邮箱</h3>
+          <p>pyz1789@outlook.com</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 彭奕卓 Peng Yizhuo</span>
+        <span>个人主页 · 简历展示 · 在线作品集</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
