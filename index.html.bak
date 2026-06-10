@@ -818,9 +818,9 @@
       <div class="nav-links">
         <a href="#about">关于我</a>
         <a href="#experience">实习经历</a>
-        <a href="#portfolio">AI 探索</a>
-        <a href="#skills">技能工具</a>
         <a href="#projects">项目经历</a>
+        <a href="#skills">技能工具</a>
+        <a href="#portfolio">作品集</a>
       </div>
       <a class="btn" href="mailto:pyz1789@outlook.com">联系我</a>
     </nav>
@@ -947,43 +947,190 @@
       </div>
     </section>
 
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Projects</span>
+          <h2>项目经历</h2>
+          <p>
+            以资料整合、文献梳理、问卷调研和政策分析为基础，沉淀研究分析、信息组织与问题拆解能力。
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="project-cover yellow">
+              <div class="project-index">Project 01</div>
+              <div class="project-title-en">5G<br />AI<br />Scheduling</div>
+            </div>
+            <h3>5G基站集群协同节能AI调度模型研究</h3>
+            <p>
+              围绕 5G 基站节能、AI 调度、通信基础设施和“双碳”相关议题，系统搜集行业报告、政策文件、新闻资料和学术文献。
+            </p>
+            <ul class="work-list">
+              <li>为项目背景研究提供资料支持，进行清洗、分类和主题归纳。</li>
+              <li>整理 5G 基站集群节能、智慧城市、工业互联网等重点应用场景。</li>
+              <li>参与项目背景和应用场景分析部分撰写，理解技术应用、政策环境和产业需求之间的关系。</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">AI 调度</span>
+              <span class="tag">行业研究</span>
+              <span class="tag">资料整理</span>
+              <span class="tag">技术治理</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="project-cover blue">
+              <div class="project-index">Project 02</div>
+              <div class="project-title-en">Digital<br />Government</div>
+            </div>
+            <h3>数字政府背景下移动政务平台公众采纳影响因素研究</h3>
+            <p>
+              围绕数字政府服务、用户使用意愿和平台信任机制开展文献梳理、问卷设计、访谈执行和结果分析。
+            </p>
+            <ul class="work-list">
+              <li>结合 UTAUT、D&M 模型及信任理论，梳理绩效期望、努力期望、社会影响、信息质量、系统质量与信任机制等影响因素。</li>
+              <li>赴越秀区 3 个街道开展问卷调查与访谈，回收 234 份问卷，获得 213 份有效样本。</li>
+              <li>参与样本整理、问题分析和政策建议撰写。</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">数字政府</span>
+              <span class="tag">问卷调研</span>
+              <span class="tag">公共服务</span>
+              <span class="tag">政策建议</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Skills</span>
+          <h2>技能工具</h2>
+          <p>
+            以办公协作、基础数据处理和中英文资料检索为核心，支持项目推进、材料撰写和内容表达。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card skill-card">
+            <h3>办公与项目支持</h3>
+            <p>
+              熟练使用 Word、PowerPoint、Excel 完成材料撰写、汇报制作、会议纪要、基础数据整理和项目进度跟进；掌握 VLOOKUP、基础函数、图表制作及数据透视表。
+            </p>
+          </article>
+
+          <article class="card skill-card">
+            <h3>数据与工具基础</h3>
+            <p>
+              可使用 SPSS、Stata 完成描述性统计、相关性分析、基础回归和常见显著性检验；掌握 SQL 基础查询；了解 Power BI 基础可视化流程。
+            </p>
+          </article>
+
+          <article class="card skill-card">
+            <h3>语言与资料检索</h3>
+            <p>
+              大学英语六级 597、四级 587，具备较好的英文资料阅读、信息检索和书面表达能力，能够支持中英文材料整理和研究辅助工作。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="portfolio" class="section">
       <div class="container">
         <div class="section-head">
           <span class="label">Portfolio</span>
-          <h2>AI 探索与项目实操</h2>
+          <h2>作品集</h2>
           <p>
-            8 份独立产出，覆盖数据分析、行业研究、产品测评与 AI 工作流搭建。<br />
-            选题、框架和判断标准由我完成，AI 帮我省的是执行时间。
+        
           </p>
         </div>
 
-        <div class="grid-3" style="margin-bottom:28px">
-          <article class="card">
-            <h3>数据分析</h3>
-            <p>从天猫订单和豆包付费数据中提取商业信号。</p>
-            <div class="tags"><span class="tag">Excel</span><span class="tag">描述性统计</span><span class="tag">付费归因</span></div>
-          </article>
-          <article class="card">
-            <h3>行业研究</h3>
-            <p>拆解 AI 助手的产品定位之争，构建三类任务模型框架。</p>
-            <div class="tags"><span class="tag">产品定位</span><span class="tag">框架构建</span><span class="tag">交叉验证</span></div>
-          </article>
-          <article class="card">
-            <h3>产品测评 &amp; 落地实操</h3>
-            <p>量化评估 Codex，撰写 AI 智能体 FAQ，搭视频自动化流水线。</p>
-            <div class="tags"><span class="tag">工具评估</span><span class="tag">流程文档</span><span class="tag">AI 工作流</span></div>
-          </article>
-        </div>
+        <div class="portfolio-feature">
+          <div class="portfolio-pdf">
+            <div class="small">PDF Portfolio</div>
+            <div class="big">Campus<br />Content<br />Design</div>
+            <div>海报设计 · 活动推文 · 校园传播 · 视觉排版</div>
+          </div>
 
-        <div style="text-align:center;margin-bottom:48px">
-          <a class="btn" href="https://redfi1ed.github.io/files/豆包付费商业化评估分析报告.pdf" target="_blank" style="font-size:18px;padding:18px 32px">查看完整作品集</a>
-          <p style="margin-top:14px;color:var(--muted);font-size:14px">点击上方卡片直接查看各项目文档</p>
+          <div class="portfolio-text">
+            <h3>从活动信息到可传播内容</h3>
+            <p>
+              我在校园活动与社团传播中积累了海报设计、公众号内容组织、活动文案和视觉排版经验。相比单纯追求美观，我更关注信息层级是否清楚、阅读路径是否顺畅，以及视觉风格是否服务于具体场景。
+            </p>
+            <p>
+      
+            </p>
+            <a class="btn secondary" href="portfolio-elegant-gathering.pdf" target="_blank">查看 PDF 作品</a>
+          </div>
         </div>
 
         <div class="portfolio-gallery">
-          <a href="https://redfi1ed.github.io/files/天猫订单数据分析项目报告.pdf" target="_blank" style="text-decoration:none;color:inherit"><article class="work-card"><div class="work-img wide" style="background:linear-gradient(135deg,#ffd166,#ffe7a3);display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:950">📊</div><h3>天猫订单数据分析</h3><p>从订单数据反推用户行为，定位价格敏感度与复购模式。</p></article></a>
-          <a href="https://redfi1ed.github.io/files/豆包付费商业化评估分析报告.pdf" target="_blank" style="text-decoration:none;color:inherit"><article class="work-card"><div class="work-img wide" style="background:linear-gradient(135deg,#2f81f7,#77b2ff);display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:950">⚔️</div><h3>豆包 vs ChatGPT</h3><p>产品定位、用户画像和商业策略三维度对比分析。</p></article></a>
-          <a href="https://redfi1ed.github.io/files/银行内部AI智能体开发实操FAQ_员工指南.pdf" target="_blank" style="text-decoration:none;color:inherit"><article class="work-card"><div class="work-img wide" style="background:linear-gradient(135deg,#39745f,#8fbc9f);display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:950">📋</div><h3>银行 AI 智能体开发 FAQ</h3><p>面向非技术人员的实操指南，30+ 常见问题全覆盖。</p></article></a>
-          <a href="' + BASE + '/银行内部AI智能体开发实操FAQ_员工指南.pdf" target="_blank" style="text-decoration:none;color:inherit"><article class="work-card"><div class="work-img wide" style="background:linear-gradient(135deg,#6366f1,#a5b4fc);display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:950">🧠</div><h3>AI Agent 工具链探索</h3><p>系统性评估 6 个 AI 工具和 skill，形成可复用的评估框架。</p></article></a>
+          <article class="work-card">
+            <div class="work-img">
+              <img src="poster-snow.png" alt="雪国主题海报设计" />
+            </div>
+            <h3>文学主题海报｜雪国</h3>
+            <p>以留白、冷色调和竖向文字组织营造文学感，突出主题氛围与阅读情绪。</p>
+          </article>
+
+          <article class="work-card">
+            <div class="work-img">
+              <img src="poster-rain.png" alt="雨主题海报设计" />
+            </div>
+            <h3>文学主题海报｜雨</h3>
+            <p>围绕《百年孤独》文本意象进行视觉转译，强化文字、图像与情绪的统一。</p>
+          </article>
+
+          <article class="work-card">
+            <div class="work-img">
+              <img src="poster-reading-club.png" alt="悦读协会招新海报" />
+            </div>
+            <h3>社团招新海报｜悦读协会</h3>
+            <p>面向招新场景进行信息排版，兼顾活动时间、地点、对象和报名入口展示。</p>
+          </article>
+
+          <article class="work-card">
+            <div class="work-img">
+              <img src="poster-literary-club.png" alt="文学社招新海报" />
+            </div>
+            <h3>社团招新海报｜文学社</h3>
+            <p>使用传统视觉元素和大标题排版，突出文学社招新主题与校园传播氛围。</p>
+          </article>
         </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact">
+    <div class="container">
+      <div class="contact-box">
+        <h2>正在寻找实习机会，欢迎联系。</h2>
+        <p>
+          期待 AI 方向运营、战略运营、数字化项目支持、内容运营等相关实习机会。可一周内到岗，可连续实习 3–6 个月。
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>电话 / 微信</h3>
+          <p>18301731033</p>
+        </div>
+        <div class="contact-card">
+          <h3>邮箱</h3>
+          <p>pyz1789@outlook.com</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 彭奕卓 Peng Yizhuo</span>
+        <span>个人主页 · 简历展示 · 在线作品集</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
